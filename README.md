@@ -26,4 +26,4 @@ To get around this I did the following:
 
 Hooray! We are in!
 
-![image](C:\Users\nated\OneDrive\Pictures) 
+![image](C:\Users\nated\OneDrive\Pictures\l-intro-1714695636)
