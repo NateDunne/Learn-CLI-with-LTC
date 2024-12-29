@@ -22,10 +22,6 @@ To get around this I did the following:
 
 7.) Clicked Show Access Key
 
-8.) Ran the following command 
-''' 
-aws configure 
-''' 
-and input my keys
+8.) Ran the following command ``` aws configure ``` and input my keys
 
 Hooray! We are in!
