@@ -84,6 +84,7 @@ I remember seeing a **port_8080_service.sh** file listed in the ``` /ctf_challen
 
 
 # 7. Encodeded File
+**Objective:** Decode the base64 encoded flag in the 'encoded_flag.txt' file.
 
 While in the directory above I saw the encoded file and ran ``` base64 -d ``` on the file and got the last flag.
 
