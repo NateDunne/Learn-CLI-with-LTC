@@ -35,15 +35,19 @@ We are soooo in!!
 
 # 1. Hidden File
 
-Here I used the command ``` ls -a ``` to show all the files **Including hidden**. Once we see the hidden files run the ``` cat ``` command with the following file path and grab the FLAG!
+Here I used the command ``` ls -la ``` to show all the files. I then moved to the directory ctf_challenges using ```cd ``` then used my  ``` cat ```... command _pun intended_ 
+![image](https://github.com/user-attachments/assets/ca43d086-58d8-4f7d-9374-a33c5b9bd9f2)
+
 
 # 2. Secret File
 
-Here I used the previous command ``` ls -a ``` and saw the **very_secret_file.txt** and ran ``` cat very_secret_file.txt ``` and got the flag for this one
+Here I used the previous command ``` ls -la ``` and saw the **very_secret_file.txt** and ran ``` cat very_secret_file.txt ``` 
+![image](https://github.com/user-attachments/assets/59203fcf-2f49-421d-8e3d-8492f027b2af)
 
 # 3. Large file
 
-Here I switched directories and started with using ``` ls ``` to find the large file txt file. After I used the ``` more ``` command to grab the flag
+To find the large log file I first figured out what where log files were stored in Linux systems. I then ran the command ``` du -hs /var/log* | sort -h ``` this helped tidy things up a bit so I could sort by the size of the file. After I saw the **large_log_file.log** and used ``` cat /var/log/large_log_file.log | more ``` to show a the contents in smaller secctions. 
+![image](https://github.com/user-attachments/assets/5c1926d6-bfdf-41a6-ac32-859508765ea6)
 
 # 4. Specific UID
 
