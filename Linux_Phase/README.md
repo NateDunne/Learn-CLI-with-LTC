@@ -38,7 +38,8 @@ We are soooo in!!
 
 Here I used the command ``` ls -la ``` to show all the files. I then moved to the directory ctf_challenges using ```cd ``` then used my  ``` cat ```... command _pun intended_ 
 
-![image](https://github.com/user-attachments/assets/ca43d086-58d8-4f7d-9374-a33c5b9bd9f2)
+<img width="332" alt="image" src="https://github.com/user-attachments/assets/0f8e913a-244a-45e4-a723-83a4d76130be" />
+
 
 
 # 2. Secret File
@@ -46,27 +47,31 @@ Here I used the command ``` ls -la ``` to show all the files. I then moved to th
 
 Here I used the previous command ``` ls -la ``` and saw the **very_secret_file.txt** and ran ``` cat very_secret_file.txt ``` 
 
-![image](https://github.com/user-attachments/assets/59203fcf-2f49-421d-8e3d-8492f027b2af)
+<img width="294" alt="image" src="https://github.com/user-attachments/assets/e6c6f340-d27e-4c57-a1fb-98e48d98b52e" />
+
 
 # 3. Large file
 **Objective:** Find the largest file in the /var/log directory and retrieve the flag from it.
 
 I ran the command ``` du -hs /var/log* | sort -h ``` this helped tidy things up a bit so I could sort by the size of the file. After I saw the **large_log_file.log** and used ``` cat /var/log/large_log_file.log | more ``` to show a the contents in smaller secctions. 
 
-![image](https://github.com/user-attachments/assets/5c1926d6-bfdf-41a6-ac32-859508765ea6)
+<img width="379" alt="image" src="https://github.com/user-attachments/assets/208fcd92-c80d-4ac5-b65d-1059be794a92" />
+
 
 # 4. Specific UID
 **Objective:** Identify the user with UID 1001 and find the flag in their home directory.
 
 Here I found the user ID 1001 by heading to the home directory and use ``` id ``` I tried to get into the **ctf_user** directory but was denied. I then used ``` sudo ``` to try and enter the directory but this didn't do anything. After I tried to list any files in the user directory with ``` sudo ls /home/ctf_user ``` I found the **flag.txt** I then used ``` sudo cat ``` to extract the contents.
 
-![image](https://github.com/user-attachments/assets/cb095979-3e66-4a3b-8fe1-c165ab9c3589)
+<img width="355" alt="image" src="https://github.com/user-attachments/assets/e1e72e71-acfe-4bad-83e7-ba1f456d215a" />
+
 
 # 5. Special permissions 
 **Objective:** Locate the file owned by root with permissions 777 and read its contents.
 I first needed to find theh permissions for files so I used ``` find / -type f -perm 777 ``` this slammed my console with a lot of files but I saw the /root directory and used ``` sudo ls /root ``` to get the **everyone_can_access_me** file and used ``` sudo cat /root/everyone_can_access_me ``` to get the flag.
 
-![image](https://github.com/user-attachments/assets/3ac122ee-30de-4e42-ac4a-290dde5c437a)
+<img width="403" alt="image" src="https://github.com/user-attachments/assets/909e7a63-21a7-43a5-9f38-d17598440800" />
+
 
 
 # 6. Hidden Service
@@ -74,7 +79,8 @@ I first needed to find theh permissions for files so I used ``` find / -type f -
 
 I remember seeing a **port_8080_service.sh** file listed in the ``` /ctf_challenges ``` directory earrlier. I ran ``` cat ``` and then found the flag within the content.
 
-![image](https://github.com/user-attachments/assets/f98c5db3-cc63-4bd9-b81d-7c639c27a655)
+<img width="434" alt="image" src="https://github.com/user-attachments/assets/99f45c44-f036-4612-b64c-3b910eec35ee" />
+
 
 
 # 7. Encodeded File
