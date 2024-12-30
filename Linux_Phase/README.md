@@ -1,32 +1,25 @@
-# Learn-CLI-with-LTC
+# Journey to Cloud - Linux CTF Challenge
 
-I am trying to pick up the skills I need to pursue a career in cloud computing. To do this, I will need to understand linux as it is widely used on cloud servers.
-I will need to set up the learning environment which was followed here https://github.com/learntocloud/ltc-linux-challenge/tree/main/aws
+Hello! This is my journey through 7 CTF Challenges, testing my skills with Linux commands. Flags are presented in this format ``` CTF{some_text_here} ```
 
-# Note
-In the initial set-up for AWS CLI I ran into an issue where I was unable to ssh into the remote server because I didn't have the proper keys
+# Set-up Environment
 
-To get around this I did the following:
+To get started I had to set-up the lab environment. **NOTE** _I was using VSCode to do all of the following_.
 
-1.) Went to the Amazon Web Services console
+I cloned the ltc-linux-challenge repo and ran terraform in the /aws directory.
 
-2.) Clicked your account name in the top right corner
+``` git clone https://github.com/learntocloud/ltc-linux-challenge ```
 
-3.) Select Security Credentials from the drop-down list
+``` cd aws/ ```
 
-4.) Clicked Continue to Security Credentials
+``` terraform init ```
 
-5.) Expand Access Keys
+``` terraform apply ```
+_Take note of this IP!!!_
 
-6.) Clicked Create New Access Key
+Once this was done I needed configure the CLI with my AWS credentials which were found in my AWS Console > Security Credentials. I created the key and ran ``` aws configure ``` and input the needed values. Now I needed to set up an ssh session within connecting me to the virtual environment.
 
-7.) Clicked Show Access Key
-
-8.) Ran the following command ``` aws configure ``` and input my keys
-
-Hooray! We are in!
-
-![image](https://static1.srcdn.com/wordpress/wp-content/uploads/2023/11/ryan-gosling-as-colt-giving-the-thumbs-up-in-an-army-uniform-in-the-fall-guy.jpg)
+We are soooo in!!
 
 # Challenge!
 
@@ -42,7 +35,7 @@ Hooray! We are in!
 
 # 1. Hidden File
 
-Here use the command ``` ls -a ``` to show all the files **Including hidden**. Once we see the hidden files run the ``` cat ``` command with the following file path and grab the FLAG!
+Here I used the command ``` ls -a ``` to show all the files **Including hidden**. Once we see the hidden files run the ``` cat ``` command with the following file path and grab the FLAG!
 
 # 2. Secret File
 
@@ -68,7 +61,7 @@ Using ``` netstat ``` and found then used ``` netstat -p | grep ":8080" ```
 
 # 7. Encodeded File
 
-Ran through the directory using ``` ls ``` 
+Ran through the directory using ``` ls ```
 
 Afer I was able to find the encoded_flag.txt file and ran ``` base64 -d ``` on the file and got the last flag
 
